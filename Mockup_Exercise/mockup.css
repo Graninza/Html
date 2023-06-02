@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header{
+    background-color: #363636;
+    overflow: hidden;
+}
+
+.logo{
+    float: left;
+}
+
+.logo > img{
+    width: auto;
+    height: 150px;
+    vertical-align: middle;
+}
+
+.nav{
+    float: left;
+    width: 80%;
+}
+
+.nav > ul{
+    height: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 60px 70px;
+}
+
+.nav a:hover{
+    background-color: rgb(32, 164, 224);
+}
+
+.nav a:active{
+    background-color: rgb(44, 224, 134);
+}
+
+.home-img{
+    width: 100%;
+    height: 400px;
+    background-image: url(./MicrosoftTeams-image\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-title{
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+    width: 60%;
+    margin-top: 200px;
+}
+
+.home-text{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    width: 60%;
+    margin-top: 90px;
+}
+
+.main{
+    display: flex;
+    height: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-title{
+    color: black;
+    align-self: flex-start;
+    font-size: 43px;
+    margin-top: 20px;
+    
+}
+
+.main-text{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.footer{
+    display: flex;
+    height: 120px;
+    background-color: #363636;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+i[class^=fa-brands]{
+    font-size: 30px;
+    color: blue;
+}
