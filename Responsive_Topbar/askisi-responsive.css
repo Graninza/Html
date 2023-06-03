@@ -1,0 +1,132 @@
+:root{
+    --white: #f9f9f9;
+    --black: #36383f;
+    --grey: #85888c;
+    --brown: #762124;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background-color: lightgray;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: var(--brown);
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: var(--white);
+    display: block;
+}
+
+.navbar ul li a:hover{
+    background-color: var(--grey);
+    color: var(--black);
+}
+
+.dropdown-content{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: var(--brown);
+    display: none;
+}
+
+.dropdown-content li{
+    width: 100%;
+    border-top: 1px solid var(--white);
+}
+
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul{
+    display: initial;
+}
+
+.main{
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    padding: 20px;
+
+}
+
+footer{
+    margin-top: 20px;
+    padding-top: 15px;
+    background-color: var(--brown);
+    color: var(--white);
+    height: 50px;
+    text-align: center;
+}
+
+@media (max-width:600px) {
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid var(--white);
+        display: none;
+    }
+
+    .navbar ul li{
+        width: 100%;
+    }
+
+    .dropdown-content{
+        position: relative;
+        width: 100%;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+        background-color: var(--brown);
+    }
+}
